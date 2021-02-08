@@ -1,5 +1,8 @@
 # React exercise: Hacker News
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple app that allows a user to search the Hacker News Algolia API and display a list of results.
+
+## Technologies Used
+I used the following technologies: HTML, CSS, React, and Redux.
 
 ## Installation and Setup
 1. Fork [repo](https://github.com/amberkhan1028/react-exercise.git)
