@@ -15,9 +15,11 @@ As the user makes searches, their search history is also displayed.
 ## Technologies Used
 This project was made using HTML, CSS, JavaScript, React and Redux.
 Additionally, I used the following libraries/ packages:
-  • **create-react-app** to set up the application 
-  • **Redux-thunk** middleware to handle asynchronous calls
-  • **axios** to make AJAX calls to Hacker News Algolia API
-  • **Material-Ui** for styling 
+   * **create-react-app** to set up the application 
+   * **Redux-thunk** middleware to handle asynchronous calls
+   * **axios** to make AJAX calls to Hacker News Algolia API
+   * **Material-Ui** for styling 
+  
+
 
 
