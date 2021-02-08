@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 
-import ArticleList from './ArticleList';
+import SearchResults from './SearchResults';
 import SearchBar from './SearchBar';
 import SearchHistory from './SearchHistory';
 
@@ -26,7 +26,7 @@ const App = () => {
       <SearchBar />
     </div>
     <div className={classes.resultsContainer}>
-      <ArticleList />
+      <SearchResults />
       <SearchHistory />
     </div>
   </div>
