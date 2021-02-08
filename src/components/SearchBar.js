@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { Button, Input } from '@material-ui/core';
+import {connect} from 'react-redux';
+
+import axios from 'axios';
+import * as actions from '../actions'
 
 
 const SearchBar = (props) => {
@@ -13,9 +17,12 @@ const SearchBar = (props) => {
     setSearchValue("")
   }
 
-  const callSearchFunction = (e) => {
+  const handleFormSubmit = async(e) => {
     e.preventDefault();
-    props.search(searchValue);
+    console.log("search submitted");
+    const url = `https://hn.algolia.com/api/v1/search?query=${searchValue}`;
+    const response = await axios.get(url);
+    props.handleFetchArticles(response.data, searchValue);
     resetInputField();
   }
 
@@ -28,9 +35,18 @@ const SearchBar = (props) => {
           placeholder="enter search term"
           variant="outlined"
         />
-        <Button onClick={callSearchFunction} type="submit" variant="contained" color="primary">go</Button>
+        <Button onClick={handleFormSubmit} type="submit" variant="contained" color="primary">go</Button>
       </div>
     );
 }
 
-export default SearchBar;
+const mapStateToProps = (state) => {
+  return {}
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleFetchArticles: (articles, search) => {dispatch(actions.fetchArticles(articles, search))}
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

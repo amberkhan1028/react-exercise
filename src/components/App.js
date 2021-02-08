@@ -5,8 +5,10 @@ import ArticleList from './ArticleList';
 import SearchBar from './SearchBar';
 import SearchHistory from './SearchHistory';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   searchContainer: {
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
     textAlign: 'center',
   },
   resultsContainer: {

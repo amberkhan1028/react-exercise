@@ -1,11 +1,26 @@
 import React, { useState } from "react";
+import { connect } from 'react-redux';
 
-
-const SearchHistory = () => {
+const SearchHistory = (props) => {
 
   return (
-      <h2>Previous searches:</h2>
+    <div>
+        <h2>Previous searches:</h2>
+        <ul>
+          {
+            props.searches.map((item, index) => (
+              <li>{item}</li>
+            ))
+          }
+        </ul>
+    </div>
     );
 }
 
-export default SearchHistory;
+const mapStateToProps = (state) => {
+  return {
+    searches: state.articlesReducer.searches,
+  }
+}
+
+export default connect(mapStateToProps, null)(SearchHistory)
