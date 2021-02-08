@@ -1,4 +1,4 @@
-# React exercise: Hacker News
+# Search Hacker News
 Search the Hacker News Algolia API
 
 ## Description
@@ -16,7 +16,7 @@ As the user makes searches, their search history is also displayed.
 This project was made using HTML, CSS, JavaScript, React and Redux.
 Additionally, I used the following libraries/ packages:
    * **create-react-app** to set up application 
-   * **Redux-thunk** middleware to handle asynchronous calls
+   * **redux-thunk** middleware to handle asynchronous calls
    * **axios** to make AJAX calls to Hacker News Algolia API
    * **Material-Ui** for styling 
   
