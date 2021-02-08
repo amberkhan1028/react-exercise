@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button, Input } from '@material-ui/core';
 
 
 const SearchBar = (props) => {
@@ -8,19 +9,27 @@ const SearchBar = (props) => {
     setSearchValue(e.target.value);
   }
 
+  const resetInputField = () => {
+    setSearchValue("")
+  }
+
   const callSearchFunction = (e) => {
-    console.log(e);
+    e.preventDefault();
+    props.search(searchValue);
+    resetInputField();
   }
 
   return (
-      <form className="search">
-        <input
+      <div className="search">
+        <Input
           value={searchValue}
           onChange={handleSearchInputChange}
-          type="text"
+          id="outlined-basic"
+          placeholder="enter search term"
+          variant="outlined"
         />
-        <input onClick={callSearchFunction} type="submit" value="search" />
-      </form>
+        <Button onClick={callSearchFunction} type="submit" variant="contained" color="primary">go</Button>
+      </div>
     );
 }
 
