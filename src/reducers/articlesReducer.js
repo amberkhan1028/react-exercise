@@ -4,17 +4,14 @@ const initState = {
 }
 
 const articlesReducer = (state = initState, action) => {
-  console.log(action.type);
   if (action.type === 'CREATE_SEARCH') {
       return {
           ...state,
           searches: [...state.searches, action.terms]
       }
   } else if (action.type === 'FETCH_ARTICLES') {
-    console.log("Article List", action.results);
-    var search_list = [...state.searches];
+    let search_list = [...state.searches];
     search_list.push(action.search);
-    console.log("Search List", search_list);
       return {
           ...state,
           results: action.results.hits,

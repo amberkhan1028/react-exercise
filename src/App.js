@@ -1,14 +1,14 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 
-import SearchResults from './SearchResults';
-import SearchBar from './SearchBar';
-import SearchHistory from './SearchHistory';
+import SearchResults from './components/SearchResults/SearchResults';
+import Search from './components/Search';
+import SearchHistory from './components/SearchHistory';
 
 const useStyles = makeStyles((theme) => ({
   searchContainer: {
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(3),
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
     textAlign: 'center',
   },
   resultsContainer: {
@@ -23,7 +23,7 @@ const App = () => {
   <div>
     <div className={classes.searchContainer}>
       <h1>Search Hacker News!</h1>
-      <SearchBar />
+      <Search />
     </div>
     <div className={classes.resultsContainer}>
       <SearchResults />

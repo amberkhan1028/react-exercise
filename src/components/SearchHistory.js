@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from 'react-redux';
 
 const SearchHistory = (props) => {
@@ -8,7 +8,7 @@ const SearchHistory = (props) => {
         <h2>Previous searches:</h2>
         <ul>
           {
-            props.searches.map((item, index) => (
+            props.searches.map((item) => (
               <li>{item}</li>
             ))
           }
