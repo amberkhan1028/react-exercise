@@ -6,7 +6,7 @@ A simple app that allows users to search for news articles in the Hacker News Al
 As the user makes searches, their search history is also displayed. 
 
 ## Installation and Setup
-1. Fork [repo](https://github.com/amberkhan1028/react-exercise.git).
+1. Fork [repo](https://github.com/amberkhan1028/search-hacker-news.git).
 2. Clone your forked repo into your file system.
 3. Run npm install to install dependencies. 
 4. Start the server by running  **npm start** in the project directory. The app will open automatically in your browser. 
