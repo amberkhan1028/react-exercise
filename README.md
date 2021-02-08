@@ -1,8 +1,9 @@
 # React exercise: Hacker News
-A simple app that allows a user to search the Hacker News Algolia API and display a list of results.
+Search the Hacker News Algolia API
 
-## Technologies Used
-I used the following technologies: HTML, CSS, React, and Redux.
+## Description
+A simple app that allows users to search for news articles in the Hacker News Algolia API, and displays a list of resulting articles.
+As the user makes searches, their search history is also displayed. 
 
 ## Installation and Setup
 1. Fork [repo](https://github.com/amberkhan1028/react-exercise.git)
@@ -10,3 +11,13 @@ I used the following technologies: HTML, CSS, React, and Redux.
 3. Run npm install to install dependencies npm install
 4. Start the server by running  **npm start** in the project directory. The app will open automatically in your browser. 
 5. That's it! Enjoy :~)
+
+## Technologies Used
+This project was made using HTML, CSS, JavaScript, React and Redux.
+Additionally, I used the following libraries/ packages:
+  • **create-react-app** to set up the application 
+  • **Redux-thunk** middleware to handle asynchronous calls
+  • **axios** to make AJAX calls to Hacker News Algolia API
+  • **Material-Ui** for styling 
+
+
